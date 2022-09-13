@@ -41,6 +41,8 @@ dependencies:
 
   flutter_google_places: ^0.3.0
 
+  awesome_snackbar_content: ^0.0.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
