@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter_tutorial/screens/current_location_screen.dart';
+import 'package:google_maps_flutter_tutorial/screens/nearby_places_screen.dart';
 import 'package:google_maps_flutter_tutorial/screens/search_places_screen.dart';
 import 'package:google_maps_flutter_tutorial/screens/simple_map_screen.dart';
 
@@ -38,7 +39,14 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
                 return const SearchPlacesScreen();
               }));
-            }, child: const Text("Search Places"))
+            }, child: const Text("Search Places")),
+
+
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const NearByPlacesScreen();
+              }));
+            }, child: const Text("Near by Places"))
           ],
         ),
       ),
