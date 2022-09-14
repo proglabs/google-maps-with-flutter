@@ -4,6 +4,8 @@ import 'package:google_maps_flutter_tutorial/screens/nearby_places_screen.dart';
 import 'package:google_maps_flutter_tutorial/screens/search_places_screen.dart';
 import 'package:google_maps_flutter_tutorial/screens/simple_map_screen.dart';
 
+import 'screens/polyline_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -46,7 +48,14 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
                 return const NearByPlacesScreen();
               }));
-            }, child: const Text("Near by Places"))
+            }, child: const Text("Near by Places")),
+
+
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                return const PolylineScreen();
+              }));
+            }, child: const Text("Polyline between 2 points"))
           ],
         ),
       ),
